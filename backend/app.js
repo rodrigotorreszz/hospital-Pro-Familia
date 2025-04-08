@@ -3,6 +3,8 @@ import cookieParser from "cookie-parser";
 import doctorsRoutes from "./src/routes/doctors.js";
 import patientsRoutes from "./src/routes/patients.js";
 import appointmentsRoutes from "./src/routes/appoiments.js";
+import loginRoute from "./src/routes/login.js";
+import registerDoctors from "./src/routes/register.js"
 
 
 const app = express();
@@ -14,6 +16,8 @@ app.use(cookieParser());
 app.use("/api/doctors", doctorsRoutes);
 app.use("/api/patients", patientsRoutes);
 app.use("/api/appointments", appointmentsRoutes);
+app.use("/api/login", loginRoute);
+app.use("/api/registerDoctors", registerDoctors);
 
 
 export default app;
