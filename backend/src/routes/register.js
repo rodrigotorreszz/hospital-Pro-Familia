@@ -3,8 +3,5 @@ import registerDoctorsController from "../controllers/registerDoctorsController.
 const router = express.Router();
 
 router.route("/").post(registerDoctorsController.register);
-router
-  .route("/verifyCodeEmail")
-  .post(registerDoctorsController.verifyCodeEmail);
 
 export default router;
